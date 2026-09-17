@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>J2 Lab — Escolha sua loja</title>
+<meta name="description" content="J2 Lab · Impressão 3D e Tecnologia. Escolha por onde prefere comprar: Mercado Livre ou Shopee.">
+<meta name="theme-color" content="#1b1b1d">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="J2 Lab — Escolha sua loja">
+<meta property="og:description" content="Impressão 3D e Tecnologia. Compre no Mercado Livre ou na Shopee.">
+<meta property="og:image" content="assets/logo-j2lab.png">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="scene" aria-hidden="true">
+  <div class="glow glow-teal"></div>
+  <div class="glow glow-purple"></div>
+  <div class="grid-plate"></div>
+</div>
+
+<main class="page">
+  <header class="brand">
+    <img class="brand__logo" src="assets/logo-j2lab.png" alt="J2 Lab — Impressão 3D e Tecnologia" width="300" height="290">
+  </header>
+
+  <section class="intro">
+    <h1>Escolha por onde quer comprar</h1>
+    <p>Mesmos produtos, duas lojas oficiais. É só escolher a sua preferida.</p>
+  </section>
+
+  <section class="stores" aria-label="Lojas oficiais J2 Lab">
+
+    <a class="store-card store-card--ml" href="https://lista.mercadolivre.com.br/_CustoFrete_Gratis_CustId_3635811724" target="_blank" rel="noopener noreferrer" aria-label="Comprar na loja J2 Lab no Mercado Livre (abre em nova aba)">
+      <span class="store-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 8h12l1.2 11.2a2 2 0 0 1-2 2.3H6.8a2 2 0 0 1-2-2.3L6 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M9 8V6.5a3 3 0 0 1 6 0V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="store-card__body">
+        <span class="store-card__eyebrow">Loja oficial</span>
+        <span class="store-card__name">Mercado Livre</span>
+        <span class="store-card__hint">Frete grátis nos produtos J2 Lab</span>
+      </span>
+      <span class="store-card__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </a>
+
+    <a class="store-card store-card--shopee" href="https://br.shp.ee/FZ4RSyCP" target="_blank" rel="noopener noreferrer" aria-label="Comprar na loja J2 Lab na Shopee (abre em nova aba)">
+      <span class="store-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 8h12l1.2 11.2a2 2 0 0 1-2 2.3H6.8a2 2 0 0 1-2-2.3L6 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M9 8V6.5a3 3 0 0 1 6 0V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="store-card__body">
+        <span class="store-card__eyebrow">Loja oficial</span>
+        <span class="store-card__name">Shopee</span>
+        <span class="store-card__hint">Ofertas e cupons exclusivos</span>
+      </span>
+      <span class="store-card__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </a>
+
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> J2 Lab — Impressão 3D &amp; Tecnologia</p>
+  </footer>
+</main>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
