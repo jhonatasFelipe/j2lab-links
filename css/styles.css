@@ -1,25 +1,26 @@
 :root {
-  --bg: #19191b;
-  --bg-alt: #202023;
-  --card: #232326;
-  --card-border: #323236;
-  --ink: #f2f1ef;
-  --muted: #9d9ba3;
+  --bg: #fbfbfa;
+  --bg-alt: #f2f1ee;
+  --card: #ffffff;
+  --card-border: #e7e5e1;
+  --ink: #1c1c1e;
+  --muted: #6c6a70;
 
-  --teal: #2fd6c0;
+  --teal: #16b8a4;
   --teal-soft: #7be8da;
-  --purple: #8a5cf6;
+  --purple: #7c4fe0;
   --purple-soft: #b79bff;
 
   --ml-brand: #ffe600;
-  --ml-brand-ink: #2b2b00;
+  --ml-brand-ink: #8a6d00;
   --shopee-brand: #ff6b3d;
   --shopee-brand-2: #ee4d2d;
+  --shopee-brand-ink: #b03318;
 
   --radius-lg: 22px;
   --radius-md: 14px;
 
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 * {
@@ -64,7 +65,7 @@ h2 {
   height: 46vmax;
   border-radius: 50%;
   filter: blur(90px);
-  opacity: 0.28;
+  opacity: 0.16;
   will-change: transform;
 }
 
@@ -96,7 +97,7 @@ h2 {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+    radial-gradient(rgba(28, 28, 30, 0.07) 1px, transparent 1px);
   background-size: 26px 26px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 40%, transparent 90%);
 }
@@ -161,18 +162,20 @@ h2 {
 
 .store-card {
   --accent: var(--teal);
+  --accent-fg: var(--teal);
   position: relative;
   display: flex;
   align-items: center;
   gap: 0.9rem;
   padding: 1.35rem 1.2rem;
   border-radius: var(--radius-lg);
-  background: linear-gradient(165deg, var(--card), var(--bg-alt));
+  background: var(--card);
   border: 1px solid var(--card-border);
   text-decoration: none;
   color: var(--ink);
   isolation: isolate;
   overflow: hidden;
+  box-shadow: 0 2px 10px -6px rgba(28, 28, 30, 0.15);
   transition: transform 0.28s cubic-bezier(0.2, 0.7, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease;
 }
 
@@ -182,7 +185,7 @@ h2 {
   inset: 0;
   z-index: -1;
   opacity: 0;
-  background: radial-gradient(120% 140% at 0% 0%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 60%);
+  background: radial-gradient(120% 140% at 0% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 60%);
   transition: opacity 0.28s ease;
 }
 
@@ -190,7 +193,7 @@ h2 {
 .store-card:focus-visible {
   transform: translateY(-4px);
   border-color: color-mix(in srgb, var(--accent) 55%, var(--card-border));
-  box-shadow: 0 16px 40px -18px color-mix(in srgb, var(--accent) 65%, transparent);
+  box-shadow: 0 16px 36px -18px color-mix(in srgb, var(--accent) 55%, transparent);
 }
 
 .store-card:hover::before,
@@ -199,7 +202,7 @@ h2 {
 }
 
 .store-card:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent-fg);
   outline-offset: 3px;
 }
 
@@ -209,10 +212,12 @@ h2 {
 
 .store-card--ml {
   --accent: var(--ml-brand);
+  --accent-fg: var(--ml-brand-ink);
 }
 
 .store-card--shopee {
   --accent: var(--shopee-brand-2);
+  --accent-fg: var(--shopee-brand-ink);
 }
 
 .store-card__icon {
@@ -222,8 +227,8 @@ h2 {
   border-radius: 12px;
   display: grid;
   place-items: center;
-  background: color-mix(in srgb, var(--accent) 16%, var(--card));
-  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 20%, var(--card));
+  color: var(--accent-fg);
 }
 
 .store-card__icon svg {
@@ -243,7 +248,7 @@ h2 {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-fg);
 }
 
 .store-card__name {
@@ -265,8 +270,8 @@ h2 {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
-  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--accent-fg);
   transition: transform 0.28s ease;
 }
 
